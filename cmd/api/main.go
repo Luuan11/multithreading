@@ -1,6 +1,7 @@
 package main
 
 import (
+	"gomultithreading/internal/handler"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -14,6 +15,6 @@ func main() {
 		w.Write([]byte("Welcome to the Search API! Use /{cep} to search for a CEP."))
 	})
 
-	r.HandleFunc("/{cep}", nil).Methods("GET")
+	r.HandleFunc("/{cep}", handler.SearchCepHandler).Methods("GET")
 	http.ListenAndServe(":8080", r)
 }
