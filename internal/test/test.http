@@ -1,0 +1,4 @@
+GET http://localhost:8080/08080280 HTTP/1.1
+Content-Type: application/json
+
+// This is a test request for the HTTP server, using cep 0808280 for example.
